@@ -1,11 +1,11 @@
 **/*.o
 **/*.os
-**/*.so
-**/*.dll
+**/*.
 .vscode/
 main.cpp
 godot-cpp/
 example_godot/
+bin/*.so
 neural
 example/xor_GA
 example/xor_GD
