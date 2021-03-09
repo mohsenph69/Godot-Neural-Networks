@@ -1,5 +1,8 @@
 # Godot Neural Networks GDNative library (GNN)
 
+**Video Tutorial**<br>
+[https://www.youtube.com/playlist?list=PLhixpuPeRv9ZUP2EbfHot8eHRhUIaneMg](https://www.youtube.com/playlist?list=PLhixpuPeRv9ZUP2EbfHot8eHRhUIaneMg)
+
 Simply create a Neural Networks for your game in Godot which is able to learn how to play. This Neural Networks library uses two methods for learning one of the is **backpropagation** and the other is **Genetic algorithm**, in-game because we don't have training data we usually use Genetic algorithm to teach the Neural Network.
 
 **You also will be able to use this library only in c++ without Godot if you want.**
