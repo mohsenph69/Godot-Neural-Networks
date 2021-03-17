@@ -3,6 +3,9 @@
 **/*.so
 **/*.dll
 **/*.import
+**/*~
+**/*~~
+**/*~~~
 .vscode/
 main.cpp
 godot-cpp/
