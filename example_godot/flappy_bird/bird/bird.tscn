@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://bird/textures/frame-4.png" type="Texture" id=1]
+[ext_resource path="res://bird/textures/Frame-1.png" type="Texture" id=2]
+[ext_resource path="res://bird/textures/frame-2.png" type="Texture" id=3]
+[ext_resource path="res://bird/textures/frame-3.png" type="Texture" id=4]
+[ext_resource path="res://bird/bird.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30.9286, 21.8522 )
+
+[node name="bird" type="Area2D" groups=[
+"bird",
+]]
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "New Anim"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="." to="." method="_on_bird_area_entered"]
