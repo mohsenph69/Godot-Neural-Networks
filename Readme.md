@@ -68,6 +68,7 @@ This class has all methods of Network class, with this additional methods:
 ## Population Class
 ### methods
 * **init(GANetwork)**
+* **arr_init(Array of GANetwork)**
 * **get_networks()**
 * **randomize()**
 * **epoch()**

@@ -12,7 +12,8 @@ godot-cpp/
 neural
 example/xor_GA
 example/xor_GD
-example_godot/car
+example_godot/car/libgnn.so
+example_godot/.import
 example_godot/cubes
 example_godot/flappy_bird_old
 example_godot/xor

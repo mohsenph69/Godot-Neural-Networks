@@ -1,0 +1,5 @@
+CC-BY - Donation by hackcraft.de, generator by Benjamin Pickhardt
+
+preview:
+montage *.tga -geometry +0+0 -background grey0 preview.jpg
+
