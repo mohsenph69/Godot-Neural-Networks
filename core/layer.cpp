@@ -52,12 +52,15 @@ void Layer::init_no_random()
 void Layer::randomize_weights()
 {
     weights = Matrix::Random(weights.rows(), weights.cols());
+    weights = weights*8.0;
+    weights = weights/sqrt( double(weights.cols() ));
 }
 
 void Layer::randomize_biases()
 {
     biases = Matrix::Random(biases.rows(), biases.cols());
-    biases *= 0.1;
+    biases = biases/sqrt( double(weights.cols() ));
+    //biases *= 0.2;
 }
 
 int Layer::size()

@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://LEMONMILK-Light.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 1 )
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -263.0
+margin_top = -258.0
+margin_right = 263.0
+margin_bottom = 258.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="train" type="Button" parent="VBoxContainer"]
+margin_right = 526.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_fonts/font = SubResource( 1 )
+text = "Train"
+expand_icon = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 104.0
+margin_right = 526.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="continue_train" type="Button" parent="VBoxContainer"]
+margin_top = 208.0
+margin_right = 526.0
+margin_bottom = 308.0
+rect_min_size = Vector2( 100, 100 )
+custom_fonts/font = SubResource( 1 )
+text = "contine train"
+expand_icon = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 312.0
+margin_right = 526.0
+margin_bottom = 412.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="load" type="Button" parent="VBoxContainer"]
+margin_top = 416.0
+margin_right = 526.0
+margin_bottom = 516.0
+rect_min_size = Vector2( 100, 100 )
+custom_fonts/font = SubResource( 1 )
+text = "load"
+
+[connection signal="button_up" from="VBoxContainer/train" to="." method="_on_train_button_up"]
+[connection signal="button_up" from="VBoxContainer/continue_train" to="." method="_on_continue_train_button_up"]
+[connection signal="button_up" from="VBoxContainer/load" to="." method="_on_load_button_up"]

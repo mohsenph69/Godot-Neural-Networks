@@ -19,3 +19,7 @@ example_godot/flappy_bird_old
 example_godot/xor
 example_godot/.import
 example_godot/flappy_bird/lib/libgnn.so
+example_godot/keep_the_ball/.import
+.sconsign.dblite
+..gitignore.swp
+..sconsign.dblite.swp
