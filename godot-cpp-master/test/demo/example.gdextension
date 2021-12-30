@@ -1,0 +1,10 @@
+[configuration]
+
+entry_symbol = "example_library_init"
+
+[libraries]
+
+linux.64.debug = "bin/libgdexample.linux.debug.64.so"
+linux.64.release = "bin/libgdexample.linux.release.64.so"
+windows.64.debug = "bin/libgdexample.windows.debug.64.dll"
+windows.64.release = "bin/libgdexample.windows.release.64.dll"

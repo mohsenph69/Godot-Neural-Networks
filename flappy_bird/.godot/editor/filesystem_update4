@@ -1,7 +1,3 @@
-res://bird/bird.gd
 res://bird/bird.tscn
-res://birds.gd
 res://main.tscn
-res://spawn/spawn.gd
-res://tube/tube.gd
 res://tube/tube.tscn
