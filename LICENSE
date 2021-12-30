@@ -1,4 +1,4 @@
-Eigen3 is primarly under a MPL2 license (not include in repository).
+Eigen3 is primarly under a MPL2 license (under inlcude/eigen). I don't know if what is the proper way to handle this.
 
 Code in Folders src/core, src/GD, and src/GA were orginally/primarily by Mohsen Zare Sakhvidi under a MIT License 
 Code in Folders src/GDExtensionsBind is primarily by Elizabeth Suehr under a MIT License
