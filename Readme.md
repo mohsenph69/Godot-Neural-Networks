@@ -1,5 +1,6 @@
-# Godot Neural Networks GDNative library (GNN)
+# Godot 4.0 Neural Networks GDExtension library
 
+Orginal [Author](https://github.com/mohsenph69)'s video about using this library (should still be pretty much the same)
 **Video Tutorial**<br>
 [https://www.youtube.com/playlist?list=PLhixpuPeRv9ZUP2EbfHot8eHRhUIaneMg](https://www.youtube.com/playlist?list=PLhixpuPeRv9ZUP2EbfHot8eHRhUIaneMg)
 
@@ -10,9 +11,9 @@ Simply create a Neural Networks for your game in Godot which is able to learn ho
 ---
 ## How to Build
 
-For building copy godot-cpp in the main folder and build godot-cpp for your platform and target of choice. If you don't know how to build godot-cpp take a look at this [page](https://github.com/godotengine/godot-cpp)
+Building GDExtnsions is not properly documented by godot at this time, but this page as is somewhat useful [page](https://godotengine.org/article/introducing-gd-extensions)
 
-after that use scons to build the GDNative library for godot
+use scons to build the GDExtension library for godot
 ``` bash
 scons platform=[Your platform] target=[release or debug]
 ```
