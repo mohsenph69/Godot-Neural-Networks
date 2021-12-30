@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "sstream": "cpp",
+        "random": "cpp",
+        "vector": "cpp",
+        "new": "cpp"
+    }
+}
