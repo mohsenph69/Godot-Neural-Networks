@@ -146,7 +146,7 @@ elif env["platform"] == "windows":
 cpp_library += "." + env["target"] + "." + arch_suffix
 
 # make sure our binding library is properly includes
-env.Append(CPPPATH=[".", godot_headers_path, cpp_bindings_path + "include/", cpp_bindings_path + "gen/include/"])
+env.Append(CPPPATH=[".","./include/", godot_headers_path, cpp_bindings_path + "include/", cpp_bindings_path + "gen/include/"])
 env.Append(LIBPATH=[cpp_bindings_path + "bin/"])
 env.Append(LIBS=[cpp_library])
 
