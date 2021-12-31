@@ -2,6 +2,7 @@
 #define _FUNCTIONS
 
 #include "header.h"
+#include <ctime>
 
 namespace NN
 {

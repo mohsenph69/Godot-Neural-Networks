@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(61.8572, 43.7044)
+size = Vector2(69.9286, 43.7044)
 
 [node name="bird" type="Area2D" groups=["bird"]]
 script = ExtResource( "5" )
@@ -32,6 +32,7 @@ frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.0357, 0)
 shape = SubResource( "2" )
 
 [connection signal="area_entered" from="." to="." method="_on_bird_area_entered"]

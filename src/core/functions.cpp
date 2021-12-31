@@ -1,5 +1,6 @@
 #include <cmath>
 #include "functions.h"
+#include <ctime>
 
 namespace NN
 {

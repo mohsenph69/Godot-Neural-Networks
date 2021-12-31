@@ -1,6 +1,7 @@
 #include "GA/population.h"
 #include "unordered_set"
 #include <cmath>
+#include <ctime>
 
 using namespace NN;
 
@@ -8,6 +9,7 @@ using namespace NN;
 Population::Population()
 {
     networks = new std::vector<GANetwork*>();
+    std::srand(static_cast<unsigned int>(std::time(nullptr))); 
 }
 
 
@@ -297,6 +299,7 @@ void Population::epoch()
         else if(parentA->fitness == 0) parentA_win = 0.01;
         else parentA_win = parentA->fitness / (parentB->fitness + parentA->fitness);
 
+        bool isAClone = false;
         if(func::random() < cross_over_rate)
         {
             baybe = parentA->crossover(parentB);
@@ -305,9 +308,11 @@ void Population::epoch()
             if(func::random() < parentA_win)
             {
                 baybe = parentA->clone();
+                isAClone = true;
             } else 
             {
                 baybe = parentB->clone();
+                isAClone = true;
             }
             
         }
@@ -315,6 +320,10 @@ void Population::epoch()
         // mutation
         baybe->mutate(mutation_rate , mutation_power);
 
+        if(isAClone){
+            baybe->mutate(mutation_rate , mutation_power);
+            baybe->mutate(mutation_rate , mutation_power);
+        }
         new_networks->push_back(baybe);
 
         pick_index = 0;

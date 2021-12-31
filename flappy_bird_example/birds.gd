@@ -17,11 +17,11 @@ func _ready():
 	net.add_layer(1) # jump or not jump this is a question
 	net.init()
 	
-	pop.mutation_rate = 0.2
-	pop.mutation_power = 2
-	pop.crossover_rate = 0.3
+	pop.mutation_rate = 1.0
+	pop.mutation_power = 0.11
+	pop.crossover_rate = 0.2
 	pop.kill_worse_rate = 0.2
-	pop.keep_best_rate = 0.1
+	pop.keep_best_rate = 0.2
 	pop.size = 100
 	pop.init(net)
 	pop.randomize() # call this for the first time

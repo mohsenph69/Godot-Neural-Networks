@@ -5,7 +5,9 @@ using namespace NN;
 
 GALayer::GALayer(int size) : Layer(size) {}
 
-GALayer::GALayer() : Layer() {}
+GALayer::GALayer() : Layer() {
+    
+}
 
 
 GALayer * GALayer::clone()
