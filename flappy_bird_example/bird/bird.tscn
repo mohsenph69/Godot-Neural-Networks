@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfpdbl68mxvxe"]
+
+[ext_resource type="Texture2D" uid="uid://bml17y7n3y2q6" path="res://bird/textures/frame-4.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://rv20xrkw82pf" path="res://bird/textures/Frame-1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b0tlnf5a0tssp" path="res://bird/textures/frame-2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://3rbgek5lwqy" path="res://bird/textures/frame-3.png" id="4"]
+[ext_resource type="Script" path="res://bird/bird.gd" id="5"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [ExtResource( "2" ), ExtResource( "3" ), ExtResource( "4" ), ExtResource( "1" )],
+"loop": true,
+"name": &"New Anim",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(69.9286, 43.7044)
+
+[node name="bird" type="Area2D" groups=["bird"]]
+script = ExtResource( "5" )
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+frames = SubResource( "1" )
+animation = &"New Anim"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.0357, 0)
+shape = SubResource( "2" )
+
+[connection signal="area_entered" from="." to="." method="_on_bird_area_entered"]

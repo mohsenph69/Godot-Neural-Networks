@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4nk8li7cj20o"]
+
+[ext_resource type="Script" path="res://tube/tube.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://jufcukox3ntb" path="res://tube/toppng.com-flappy-bird-pipe-transparent-281x1080.png" id="2_aqp1m"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(115.597, 445.34)
+
+[node name="tube" type="Node2D" groups=["tube_root"]]
+script = ExtResource( "2" )
+
+[node name="root" type="Node2D" parent="."]
+
+[node name="top" type="Area2D" parent="root" groups=["tube"]]
+
+[node name="s" type="Sprite2D" parent="root/top"]
+position = Vector2(0, -4)
+scale = Vector2(1, -1)
+texture = ExtResource( "2_aqp1m" )
+offset = Vector2(1, 210)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="root/top"]
+position = Vector2(0, -224)
+shape = SubResource( "1" )
+
+[node name="pos" type="Position2D" parent="root/top"]
+position = Vector2(-50, 0)
+
+[node name="bottom" type="Area2D" parent="root" groups=["tube"]]
+
+[node name="pos" type="Position2D" parent="root/bottom"]
+position = Vector2(-50, 0)
+
+[node name="s" type="Sprite2D" parent="root/bottom"]
+position = Vector2(4, 5)
+texture = ExtResource( "2_aqp1m" )
+offset = Vector2(-4, 211)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="root/bottom"]
+position = Vector2(0, 223)
+shape = SubResource( "1" )

@@ -1,0 +1,8 @@
+[configuration]
+
+entry_symbol = "network_library_init"
+
+[libraries]
+
+linux.64.debug = "bin/libNetwork.linux.debug.64.so"
+
