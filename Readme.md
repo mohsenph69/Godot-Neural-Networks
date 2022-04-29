@@ -14,9 +14,13 @@ Simply create a Neural Networks for your game in Godot which is able to learn ho
 Building GDExtnsions is not properly documented by godot at this time, but this page as is somewhat useful [page](https://godotengine.org/article/introducing-gd-extensions)
 
 Build most resent version of godot
+
 ./godot.linuxbsd.tools.64 --dump-extension-api extension_api.json
+
 copy gdnative_interface.h and extension_api.json from godot files into godot-cpp
+
 build godot-cpp
+
 copy godot-cpp folder into root directory of this project (or wherever your scons file says godot-cpp is)
 
 
