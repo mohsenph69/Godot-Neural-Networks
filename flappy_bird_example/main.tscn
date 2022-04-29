@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsci6q68h82lh"]
 
-[ext_resource type="PackedScene" path="res://spawn/spawn.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cidsrg3w4kypo" path="res://spawn/spawn.tscn" id="1"]
 [ext_resource type="Script" path="res://main.gd" id="3"]
 [ext_resource type="Script" path="res://birds.gd" id="4"]
 
@@ -20,8 +20,5 @@ offset_right = 854.0
 offset_bottom = -231.795
 theme_override_font_sizes/font_size = 16
 text = "Pop Size: 11"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pass_tube" from="spawn" to="." method="_on_spawn_pass_tube"]

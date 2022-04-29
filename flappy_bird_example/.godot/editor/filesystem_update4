@@ -1,4 +1,4 @@
 res://bird/bird.tscn
-res://birds.gd
 res://main.tscn
+res://spawn/spawn.tscn
 res://tube/tube.tscn

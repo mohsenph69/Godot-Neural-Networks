@@ -7,7 +7,7 @@ default_library_name = "Network"
 default_target_path = "flappy_bird_example/bin/"
 
 # Local dependency paths, adapt them to your setup
-cpp_bindings_path = "./godot-cpp-master/"
+cpp_bindings_path = "./godot-cpp/"
 # cpp_bindings_path = "godot-cpp/"
 godot_headers_path = cpp_bindings_path + "godot-headers/"
 cpp_library = "libgodot-cpp"
